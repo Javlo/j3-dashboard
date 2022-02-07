@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+
+// Colors
+$blue-nav: #1b3059;
+--lightbrown-curve:#F2DABD;
+--lightblue-gradient:#aab1bf;
+--darkerblue-highlight:#1b3659;
+--darkblue-boxes:#263f73;
+--blue-nav:#1b3059;
+
+//Fonts
+--font-family: 'Noto Sans', sans-serif;
+
+
+};
+
+@mixin small-box {
+
+    height: 81px;
+    background-color: var(--darkblue-boxes);
+    border-radius: 35px 35px 0px 0px;
+    color:#fff;
+    font-style: italic;
+  }
+
+
+  @mixin large-box {
+    border-radius: 40px;
+    border: 2px dashed var(--darkerblue-highlight);
+  }
+
+  @mixin table-title {
+    font-style: italic;
+    font-weight: bold;
+  }

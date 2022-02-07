@@ -1,0 +1,142 @@
+@import 'global';
+
+*{
+    font: var(--font-family);
+}
+
+.navigation{
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+
+    .header{
+        display: flex;
+    
+        .logo-img{
+            width: 137px;
+            height: 156px;
+         }
+    }
+    
+    .nav{
+        width: 152px;
+        height: 600px;
+        background-color: var(--blue-nav);
+        border-radius: 45px;
+
+        .set-icon{
+            // padding-top:15vh;
+            // padding-bottom: 15vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Links-nav{
+            color:#fff;
+        }
+
+    }
+    
+}
+
+.main-title{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.donnees{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1449px;
+    height: 166px;
+
+    .box{
+        width: 342px;
+        height: 163px;
+        border-radius: 35px;
+        background-color: var(--darkblue-boxes);
+        text-align: center;
+        color:#fff;
+        justify-content: space-between;
+
+        h1{
+            padding-top: 2rem;
+        }
+        
+    }
+ }
+
+ .latest-things{
+
+    display: flex;
+    
+
+    .icon-profil{
+        width: 80px;
+        height: 80px;
+    }
+
+    .large-box{
+        width: 674px;
+        height: 423px;
+        @include large-box;
+    }
+
+    .title-box{
+        @include small-box;
+    }
+
+    .table-title{
+        @include table-title;
+    }
+ }
+
+ .paiement{
+    align-items: center;
+    justify-content: center;
+    width: 1502px;
+    height: 570px;
+    padding:0;
+    @include large-box;
+
+    .title-box{
+        @include small-box;
+    }
+
+    .month{
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .graph{
+        width:1100px;
+        height:450px;
+    }
+ }
+ 
+ .stages{
+    align-items: center;
+    justify-content: center;
+    width: 1502px;
+    height: 570px;
+    padding:0;
+    @include large-box;
+
+    .title-box{
+          @include small-box;
+    }
+
+    .table-title{
+        @include table-title;
+    }
+ }
