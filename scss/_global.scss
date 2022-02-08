@@ -13,22 +13,27 @@ $blue-nav: #1b3059;
 //Fonts
 --font-family: 'Noto Sans', sans-serif;
 
-
+//Others parameters
+--border-radius: 35px;
 };
 
-@mixin small-box {
+@mixin text-box {
 
-    height: 81px;
+    height:30%;
+    width: 100%;
+    max-width: 100%;
     background-color: var(--darkblue-boxes);
     border-radius: 35px 35px 0px 0px;
     color:#fff;
     font-style: italic;
+    overflow: hidden;
   }
 
 
   @mixin large-box {
-    border-radius: 40px;
+    border-radius: 35px;
     border: 2px dashed var(--darkerblue-highlight);
+    background-color: #fff;
   }
 
   @mixin table-title {

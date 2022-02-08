@@ -1,0 +1,22 @@
+{
+  "name": "test_javlo",
+  "version": "1.0.0",
+  "description": "vue.js dashboard default structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javlo/j3-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Javlo/j3-dashboard/issues"
+  },
+  "homepage": "https://github.com/Javlo/j3-dashboard#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

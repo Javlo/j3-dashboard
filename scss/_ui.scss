@@ -1,0 +1,32 @@
+
+@import 'global';
+
+.latest-data{
+    .latest-data-box{
+        background-color: var(--darkblue-boxes);
+        border-radius: var(--border-radius);
+        color:#fff;
+    }
+};
+
+.subs_and_mails{
+  .subs_and_mails-box{
+
+    @include large-box
+
+    }
+
+    .text-box{
+        @include text-box;
+    }
+};
+
+.money-chart{
+    .money-chart-box{
+        @include large-box
+    }
+
+    .text-box{
+        @include text-box;
+    }
+}
