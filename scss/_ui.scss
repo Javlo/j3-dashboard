@@ -30,3 +30,13 @@
         @include text-box;
     }
 }
+
+.internships{
+    .internships-box{
+        @include large-box;
+    }
+    
+    .text-box{
+        @include text-box;
+    }
+}
