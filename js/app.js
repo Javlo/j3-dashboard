@@ -102,3 +102,11 @@ am5.ready(function() {
     chart.appear(30, 100);
     
     }); // end am5.ready()
+
+
+    // nightmode
+
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+   }

@@ -1,6 +1,15 @@
 
 @import 'global';
 
+body{
+    background-color: #fff;
+}
+
+.dark-mode {
+    background-color: black;
+    color:#fff;
+  }
+
 .latest-data{
     .latest-data-box{
         background-color: var(--darkblue-boxes);
