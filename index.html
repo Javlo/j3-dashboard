@@ -4,286 +4,208 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel="stylesheet" href="css/style.min.css">
     <title>Dashboard KidsEasy</title>
 </head>
 <body>
-
+<div id="app">
     <!-- navigation -->
-<section class="navigation">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/kideasy_circle.png" alt="" width="30" height="24">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inscriptions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Paiements</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Activités</a>
-          </li>
-          <li class="nav-item">
-            <button onclick="myFunction()" class="btn"><i class="fa-solid fa-moon">dark mode</i></button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</section>
-    <!-- Main title of the dashboard -->
-<section class="container main-title mb-5">
-  <h1>Votre Dashboard</h1>
-  <hr>
-</section>
-  
-    <!-- Latest data -->
-<section class="latest-data">
-    <div class="container">
-        <div class="row">
-            <div class="col latest-data-box me-5">
-                <h1 class="text-center">60</h1>
-                <p class="text-center">nouveaux inscrits</p>
-            </div>
-            <div class="col latest-data-box me-5">
-                <h1 class="text-center">20</h1>
-                <p class="text-center">visiteurs uniques</p>
-            </div>
-            <div class="col latest-data-box">
-                <h1 class="text-center">1200</h1>
-                <p class="text-center">revenus totaux</p>
-            </div>
-        </div><!-- row -->
-    </div> <!-- container -->
-</section>
-  
-    <!-- Latest subs & mails -->
-<section class="subs_and_mails mt-5">
-    <div class="container">
-      <div class="row">
-
-      <!-- Latest subs -->
-        <div class="col subs_and_mails-box p-0 me-5">  
-            <!-- Title for the bloc Latest Inscriptions -->
-            <div>
-                <h1 class="text-center text-box py-3">Dernières inscriptions</h1>
-            </div>
-            <!-- Grid of profiles -->
-            <div class="container chart-box">
-                <div class="row">
-                    <div class="col col-lg-3 col-md-6">
-                        <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                        <h5 class="text-center">Arnaud</h5>
-                    </div>
-                    <div class="col col-lg-3 col-md-6">
-                        <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                        <h5 class="text-center">Arnaud</h5>
-                    </div>
-                    <div class="col col-lg-3 col-md-6">
-                        <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                        <h5 class="text-center">Arnaud</h5>
-                    </div>
-                    <div class="col col-lg-3 col-md-6">
-                        <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                        <h5 class="text-center">Arnaud</h5>
-                    </div>
-                </div>
-
-                <div class="row">
-                  <div class="col col-lg-3 col-md-6">
-                      <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                      <h5 class="text-center">Arnaud</h5>
-                  </div>
-                  <div class="col col-lg-3 col-md-6">
-                      <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                      <h5 class="text-center">Arnaud</h5>
-                  </div>
-                  <div class="col col-lg-3 col-md-6">
-                      <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                      <h5 class="text-center">Arnaud</h5>
-                  </div>
-                  <div class="col col-lg-3 col-md-6">
-                      <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
-                      <h5 class="text-center">Arnaud</h5>
-                  </div>
-              </div>
-              </div>
+    <section class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/kideasy_circle.png" alt="" width="30" height="24">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inscriptions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Paiements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Activités</a>
+              </li>
+              <li class="nav-item">
+                <button onclick="myFunction()" class="btn"><i class="fa-solid fa-moon">dark mode</i></button>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </section>
+        <!-- Main title of the dashboard -->
+    <section class="container main-title mb-5">
+      <h1>Votre Dashboard</h1>
+      <hr>
+    </section>
       
-      <!-- Latest mails -->
-        <div class="col subs_and_mails-box p-0 me-5">
-            <div>
-                <h1 class="text-center text-box py-3">Derniers mails</h1>
-            </div> <!-- div title latest mails -->
-            <!-- chart for latest mails -->
-            <div class="container">
-                  <table class="table table-hover table-bordered">
-                      <thead>
-                        <tr>
-                          <th scope="col">Destinateur</th>
-                          <th scope="col">Objet</th>
-                          <th scope="col">Message</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Mark</th>
-                          <td>Stage de plongée</td>
-                          <td>Bonjour, j'aurais quelques questions sur</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sam</th>
-                          <td>Stage de plongée</td>
-                          <td>Bonjour, j'aurais quelques questions sur</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Erick</th>
-                          <td>Stage de plongée</td>
-                          <td>Bonjour, j'aurais quelques questions sur</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Erick</th>
-                          <td>Stage de plongée</td>
-                          <td>Bonjour, j'aurais quelques questions sur</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Erick</th>
-                          <td>Stage de plongée</td>
-                          <td>Bonjour, j'aurais quelques questions sur</td>
-                        </tr>
-                      </tbody>
-                  </table>
-            </div>  
-        </div> <!-- div mail -->
-      </div> <!-- row -->
-    </div> <!-- container -->
-</section> 
-  
-    <!-- Money chart -->
-<section class="money-chart mt-5">
-      <div class="container money-chart-box p-0">
-             <!-- Title for the bloc Money chart -->
-        <div>
-          <h1 class="text-center text-box py-3">Courbe des paiements</h1>
-        </div>
-        <div id="chartdiv">
-  
-        </div> <!-- div chart -->
-      </div> <!-- div money container -->
-</section>
+        <!-- Latest data -->
+    <section class="latest-data">
+        <div class="container">
+            <div class="row">
+                <div class="col latest-data-box me-5">
+                    <h1 class="text-center">60</h1>
+                    <p class="text-center">nouveaux inscrits</p>
+                </div>
+                <div class="col latest-data-box me-5">
+                    <h1 class="text-center">20</h1>
+                    <p class="text-center">visiteurs uniques</p>
+                </div>
+                <div class="col latest-data-box">
+                    <h1 class="text-center">1200</h1>
+                    <p class="text-center">revenus totaux</p>
+                </div>
+            </div><!-- row -->
+        </div> <!-- container -->
+    </section>
+      
+        <!-- Latest subs & mails -->
+    <section class="subs_and_mails mt-5">
+        <div class="container">
+          <div class="row">
 
-<!-- Internship Chart -->
-<section class="money-chart mt-5 mb-5">
-  <div class="container money-chart-box p-0">
+          <!-- Latest subs -->
+            <div class="col subs_and_mails-box p-0 me-5">  
+                <!-- Title for the bloc Latest Inscriptions -->
+                <div>
+                    <h1 class="text-center text-box py-3">Dernières inscriptions</h1>
+                </div>
+                <!-- Grid of profiles -->
+                <div class="container chart-box">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-6">
+                            <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                            <h5 class="text-center">Arnaud</h5>
+                        </div>
+                        <div class="col col-lg-3 col-md-6">
+                            <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                            <h5 class="text-center">Arnaud</h5>
+                        </div>
+                        <div class="col col-lg-3 col-md-6">
+                            <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                            <h5 class="text-center">Arnaud</h5>
+                        </div>
+                        <div class="col col-lg-3 col-md-6">
+                            <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                            <h5 class="text-center">Arnaud</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col col-lg-3 col-md-6">
+                          <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                          <h5 class="text-center">Arnaud</h5>
+                      </div>
+                      <div class="col col-lg-3 col-md-6">
+                          <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                          <h5 class="text-center">Arnaud</h5>
+                      </div>
+                      <div class="col col-lg-3 col-md-6">
+                          <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                          <h5 class="text-center">Arnaud</h5>
+                      </div>
+                      <div class="col col-lg-3 col-md-6">
+                          <img src="img/temp_avatar-cool-333C33_temp.png" alt="">
+                          <h5 class="text-center">Arnaud</h5>
+                      </div>
+                  </div>
+                  </div>
+            </div>
+          
+          <!-- Latest mails -->
+            <div class="col subs_and_mails-box p-0 me-5">
+                <div>
+                    <h1 class="text-center text-box py-3">Derniers mails</h1>
+                </div> <!-- div title latest mails -->
+                <!-- chart for latest mails -->
+                <div class="container">
+                      <table data-toggle="table">
+                        <thead>
+                          <tr>
+                            <th>Item ID</th>
+                            <th>Item Name</th>
+                            <th>Item Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Item 1</td>
+                            <td>$1</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Item 2</td>
+                            <td>$2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>  
+            </div> <!-- div mail -->
+          </div> <!-- row -->
+        </div> <!-- container -->
+    </section> 
+      
+        <!-- Money chart -->
+    <section class="money-chart mt-5">
+          <div class="container money-chart-box p-0">
+                <!-- Title for the bloc Money chart -->
+            <div>
+              <h1 class="text-center text-box py-3">Courbe des paiements</h1>
+            </div>
+            <canvas id="myChart">
+      
+            </canvas> <!-- div chart -->
+          </div> <!-- div money container -->
+    </section>
+
+    <!-- Internship Chart -->
+    <section class="internships mt-5 mb-5">
+  <div class="container internships-box p-0">
          <!-- Title for the bloc Internship -->
     <div>
       <h1 class="text-center text-box py-3">Derniers stages/activités ajouté(e)s</h1>
     </div>
     <!-- tables chart -->
-    <div>
-      <table class="table table-responsive table-bordered">
+    <div class="container">
+      <table data-toggle="table">
         <thead>
           <tr>
-            <th class="table-title text-center" scope="col">Titre du stage</th>
-            <th class="table-title text-center" scope="col">Lieu</th>
-            <th class="table-title text-center" scope="col">Niveau</th>
-            <th class="table-title text-center" scope="col">Nbr max élèves</th>
-            <th class="table-title text-center" scope="col">Tranche d'âge</th>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
+            <td>1</td>
+            <td>Item 1</td>
+            <td>$1</td>
           </tr>
           <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
-          </tr>
-          <tr>
-
-            <td class="text-center">Stage de gymnastique</td>
-            <td class="text-center">Lasne</td>
-            <td class="text-center">Débutant</td>
-            <td class="text-center">10</td>
-            <td class="text-center">De 5 à 10</td>
+            <td>2</td>
+            <td>Item 2</td>
+            <td>$2</td>
           </tr>
         </tbody>
-    </table>
+      </table>
     </div> <!-- div chart -->
   </div> <!-- div internship container -->
 </section>
-
+</div>
 <!-- SCRIPTS LIST -->
+    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/b6497da9b9.js" crossorigin="anonymous"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="js/app.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
