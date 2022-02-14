@@ -13,15 +13,21 @@
     'April',
     'May',
     'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
   ];
 
   const data = {
     labels: labels,
     datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
+      label: 'Pic de revenus',
+      // backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [0, 10, 5, 2, 20, 30, 45, 20, 12, 30, 50, 100],
     }]
   };
 
@@ -38,26 +44,23 @@
 
   // bootstrap tables
 
-  // $('#table').bootstrapTable({
-  //   pagination: true,
-  //   search: true,
-  //   columns: [{
-  //     field: 'id',
-  //     title: 'Item ID'
-  //   }, {
-  //     field: 'name',
-  //     title: 'Item Name'
-  //   }, {
-  //     field: 'price',
-  //     title: 'Item Price'
-  //   }],
-  //   data: [{
-  //     id: 1,
-  //     name: 'Item 1',
-  //     price: '$1'
-  //   }, {
-  //     id: 2,
-  //     name: 'Item 2',
-  //     price: '$2'
-  //   }]
-  // })
+  // Vue.js
+  let app = Vue.createApp({
+    data: function(){
+        return {
+          message: 'Votre dashboard',
+            subs12:'120',
+            subs6:'40',
+            subs1:'20',
+            subs24:'3',
+            subs_subtitle:'nouveaux inscrits',
+            visitors: '20',
+            visitors_subtitle: 'visiteurs uniques',
+            money: '1200',
+            money_subtitle:'revenus totaux',
+            key: '1',
+        }
+    },// data
+    
+  }) // create app
+  app.mount('#app')

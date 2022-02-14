@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/chart.js/dist/Chart.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
    <link rel="stylesheet" href="css/style.min.css">
     <title>Dashboard KidsEasy</title>
 </head>
 <body>
 <div id="app">
     <!-- navigation -->
-    <section class="navigation">
+    <section id="nav" class="navigation">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
@@ -42,28 +44,43 @@
       </nav>
     </section>
         <!-- Main title of the dashboard -->
-    <section class="container main-title mb-5">
-      <h1>Votre Dashboard</h1>
+    <section id="title" class="container main-title mb-5">
+      <h1>{{message}}</h1>
       <hr>
     </section>
       
         <!-- Latest data -->
-    <section class="latest-data">
+    <section id="latest-data" class="latest-data">
         <div class="container">
-            <div class="row">
-                <div class="col latest-data-box me-5">
-                    <h1 class="text-center">60</h1>
-                    <p class="text-center">nouveaux inscrits</p>
-                </div>
-                <div class="col latest-data-box me-5">
-                    <h1 class="text-center">20</h1>
-                    <p class="text-center">visiteurs uniques</p>
-                </div>
-                <div class="col latest-data-box">
-                    <h1 class="text-center">1200</h1>
-                    <p class="text-center">revenus totaux</p>
-                </div>
-            </div><!-- row -->
+          <div class="row">
+            <div class="col latest-data-box me-5">
+              <h1 v-if="key == 1" class="text-center">{{subs12}}</h1>
+              <h1 v-if="key == 2" class="text-center">{{subs6}}</h1>
+              <h1 v-if="key == 3" class="text-center">{{subs1}}</h1>
+              <h1 v-if="key == 4" class="text-center">{{subs24}}</h1>
+              <p class="text-center">{{subs_subtitle}}</p>
+              <div class="text-center">
+                <button @click="key = 1" class="btn btn-light mb-3 me-2">12 mois</button>
+                <button @click="key = 2" class="btn btn-light mb-3 me-2">6 mois</button>
+                <button @click="key = 3" class="btn btn-light mb-3 me-2">1 mois</button>
+                <button @click="key = 4" class="btn btn-light mb-3">24 heures</button>
+              </div>
+            </div>
+            <div class="col latest-data-box me-5">
+              <h1 class="text-center">{{visitors}}</h1>
+              <p class="text-center">{{visitors_subtitle}}</p>
+              <div class="text-center">
+                <button @click="key = 5" class="btn btn-light mb-3 me-2">12 mois</button>
+                <button @click="key = 6" class="btn btn-light mb-3 me-2">6 mois</button>
+                <button @click="key = 7" class="btn btn-light mb-3 me-2">1 mois</button>
+                <button @click="key = 8" class="btn btn-light mb-3">24 heures</button>
+              </div>
+            </div>
+            <div class="col latest-data-box">
+              <h1 class="text-center">{{money}}</h1>
+              <p class="text-center">{{money_subtitle}}</p>
+            </div>
+          </div><!-- row -->
         </div> <!-- container -->
     </section>
       
@@ -202,8 +219,13 @@
 </section>
 </div>
 <!-- SCRIPTS LIST -->
-    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <!-- <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script> -->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script> -->
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="https://kit.fontawesome.com/b6497da9b9.js" crossorigin="anonymous"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
