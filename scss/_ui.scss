@@ -49,3 +49,7 @@ body{
         @include text-box;
     }
 }
+
+[v-cloak]{
+    display:none;
+}

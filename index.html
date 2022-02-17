@@ -13,7 +13,7 @@
     <title>Dashboard KidsEasy</title>
 </head>
 <body>
-<div id="app">
+<div id="app" v-cloak>
     <!-- navigation -->
     <section id="nav" class="navigation">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,30 +55,33 @@
           <div class="row">
             <div class="col latest-data-box me-5">
               <h1 v-if="key == 1" class="text-center">{{subs12}}</h1>
-              <h1 v-if="key == 2" class="text-center">{{subs6}}</h1>
-              <h1 v-if="key == 3" class="text-center">{{subs1}}</h1>
-              <h1 v-if="key == 4" class="text-center">{{subs24}}</h1>
               <p class="text-center">{{subs_subtitle}}</p>
               <div class="text-center">
-                <button @click="key = 1" class="btn btn-light mb-3 me-2">12 mois</button>
-                <button @click="key = 2" class="btn btn-light mb-3 me-2">6 mois</button>
-                <button @click="key = 3" class="btn btn-light mb-3 me-2">1 mois</button>
-                <button @click="key = 4" class="btn btn-light mb-3">24 heures</button>
+                <button @click="show ('120')" class="btn btn-light mb-3 me-2">12 mois</button>
+                <button @click="show ('40')" class="btn btn-light mb-3 me-2">6 mois</button>
+                <button @click="show ('20')" class="btn btn-light mb-3 me-2">1 mois</button>
+                <button @click="show ('3')" class="btn btn-light mb-3">24 heures</button>
               </div>
             </div>
-            <div class="col latest-data-box me-5">
+            <div class="col latest-data-box me-5 p-auto">
               <h1 class="text-center">{{visitors}}</h1>
               <p class="text-center">{{visitors_subtitle}}</p>
               <div class="text-center">
-                <button @click="key = 5" class="btn btn-light mb-3 me-2">12 mois</button>
-                <button @click="key = 6" class="btn btn-light mb-3 me-2">6 mois</button>
-                <button @click="key = 7" class="btn btn-light mb-3 me-2">1 mois</button>
-                <button @click="key = 8" class="btn btn-light mb-3">24 heures</button>
+                <button @click="show ('300')" class="btn btn-light mb-3 me-2">12 mois</button>
+                <button @click="show ('120')" class="btn btn-light mb-3 me-2">6 mois</button>
+                <button @click="show ('60')" class="btn btn-light mb-3 me-2">1 mois</button>
+                <button @click="show ('30')" class="btn btn-light mb-3">24 heures</button>
               </div>
             </div>
             <div class="col latest-data-box">
               <h1 class="text-center">{{money}}</h1>
               <p class="text-center">{{money_subtitle}}</p>
+              <div class="text-center">
+                <button @click="show ('300')" class="btn btn-light mb-3 me-2">12 mois</button>
+                <button @click="show ('120')" class="btn btn-light mb-3 me-2">6 mois</button>
+                <button @click="show ('60')" class="btn btn-light mb-3 me-2">1 mois</button>
+                <button @click="show ('30')" class="btn btn-light mb-3">24 heures</button>
+              </div>
             </div>
           </div><!-- row -->
         </div> <!-- container -->

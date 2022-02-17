@@ -50,17 +50,20 @@
         return {
           message: 'Votre dashboard',
             subs12:'120',
-            subs6:'40',
-            subs1:'20',
-            subs24:'3',
             subs_subtitle:'nouveaux inscrits',
-            visitors: '20',
+            visitors: '300',
             visitors_subtitle: 'visiteurs uniques',
-            money: '1200',
+            money: '1500',
             money_subtitle:'revenus totaux',
             key: '1',
         }
     },// data
+
+    methods: {
+        show: function (message) {
+        alert(message)
+      }
+    }
     
   }) // create app
   app.mount('#app')
