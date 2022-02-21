@@ -56,12 +56,14 @@
             money: '1500',
             money_subtitle:'revenus totaux',
             key: '1',
+            latest_subs_title: 'Dernières inscriptions',
+            latest_mails:'Derniers mails',
         }
     },// data
 
     methods: {
-        show: function (message) {
-        alert(message)
+        show(message) {
+          alert(message)
       }
     }
     
