@@ -58,6 +58,8 @@
             key: '1',
             latest_subs_title: 'Dernières inscriptions',
             latest_mails:'Derniers mails',
+            paiement_curve: 'Courbe des paiements',
+            latest_internships: 'Derniers stages/activités ajouté(e)s'
         }
     },// data
 
