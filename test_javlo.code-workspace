@@ -18,5 +18,6 @@
 				"savePath": "/css/"
 			},
 		],
+		"livePreview.defaultPreviewPath": "/index_no_node.html",
 	}
 }
