@@ -15,7 +15,7 @@ let app = Vue.createApp({
     return {
       message: 'Votre dashboard',
       data: '',
-      subs_subtitle: 'nouveaux inscrits',
+      registrationdays: 0,
       visitors_subtitle: 'visiteurs uniques',
       money_subtitle: 'revenus totaux',
       latest_subs_title: 'Dernières inscriptions',
@@ -27,7 +27,11 @@ let app = Vue.createApp({
   }, // data
 
   methods: {
-    selectSubs(message) {
+    selectSubs(days) {
+      
+      console.log("days:",days);
+      var self=this;
+      var globalDays=days;
 
       fetch('inscriptions-paiements.txt')
       .then(function (response) {
@@ -40,22 +44,21 @@ let app = Vue.createApp({
         for (i=0; i<data.length; i++) {
           var registration = data[i]
           // console.log("activityDateStart = "+parseDate(registration.activityDateStart));
-          // console.log("registration = " ,registration);
+          console.log("registration = " ,registration);
           if (registration.active){
 
             var today = new Date();
             var debut = new Date("activityDateStart = "+parseDate(registration.activityDateStart));
             var time = Math.abs(debut - today);
-            var day1 = Math.round(time / (1000 * 60 * 60 * 24));
-            var days182 = Math.round(time / (1000 * 60 * 60 * 24 * 365 / 2));
-            var days365 = Math.round(time / (1000 * 60 * 60 * 24 * 365));
-            var days30 = Math.round( time / (1000 * 60 * 60 * 24 * 365 / 12));
-            // console.log(day1 + " days");
-            var days = "";
-            c++;
-
+            var daydata = Math.round(time / (1000 * 60 * 60 * 24));
+            console.log("dd:",daydata);
+            console.log(parseInt(globalDays))
+            if(daydata < globalDays){
+              c++
           }
+          };
         }
+        self.registrationdays=c;
       })
       .catch((error) => console.error("FETCH ERROR:", error));
     }

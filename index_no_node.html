@@ -53,12 +53,12 @@
       <div class="container">
         <div class="row">
           <div class="col latest-data-box me-5">
-            <h1  id="demo" class="text-center"></h1>
+            <h1  id="demo" class="text-center">{{registrationdays}}</h1>
             <p class="text-center">{{subs_subtitle}}</p>
             <div class="text-center">
-              <button @click="selectSubs" id="btn365" class="btn btn-light mb-3 me-2">12 mois</button>
-              <button @click="selectSubs" id="btn182" class="btn btn-light mb-3 me-2">6 mois</button>
-              <button @click="selectSubs" id="btn30" class="btn btn-light mb-3 me-2">1 mois</button>
+              <button @click="selectSubs(365)" id="btn365" class="btn btn-light mb-3 me-2">12 mois</button>
+              <button @click="selectSubs(185)" id="btn182" class="btn btn-light mb-3 me-2">6 mois</button>
+              <button @click="selectSubs(90)" id="btn30" class="btn btn-light mb-3 me-2">1 mois</button>
               <button @click="selectSubs" id="btn1" class="btn btn-light mb-3">24 heures</button>
             </div>
           </div>
