@@ -14,8 +14,9 @@ let app = Vue.createApp({
   data() {
     return {
       message: 'Votre dashboard',
-      data: '',
       registrationdays: 0,
+      money_gain: 0,
+      subs_subtitle:'inscriptions',
       visitors_subtitle: 'visiteurs uniques',
       money_subtitle: 'revenus totaux',
       latest_subs_title: 'Dernières inscriptions',
@@ -61,6 +62,30 @@ let app = Vue.createApp({
         self.registrationdays=c;
       })
       .catch((error) => console.error("FETCH ERROR:", error));
+    }, 
+    showmoney(money){
+      var self=this;
+
+      fetch('inscriptions-paiements.txt')
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  let c=0;
+  for (i=0; i<data.length; i++) {
+    var registration = data[i]
+    console.log("bankLineTotal = "+(registration.bankLineTotal));
+    console.log("registration = " ,registration);
+    if (registration.active){
+
+      var money = Math.round(registration.bankLineTotal++) 
+      console.log(money)
+    
+    };
+    // self.money_gain = c
+  }
+})
+.catch((error) => console.error("FETCH ERROR:", error));
     }
   }, //methods
 
